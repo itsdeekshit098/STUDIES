@@ -5,7 +5,7 @@
     |hansi| <==a,b
     |-----|
 
-    2)how to verify whether the variables poiting to same reference see below example
+    2)how to verify whether the variables pointing to same reference see below example
 
 
  */
@@ -15,6 +15,7 @@
     {
         String h1="hansi";
         String h2="hansi";
+        String h3=new String(h2); //it means string h3 refers to h2 see at end of program
         if(h1.equals(h2))
         {
             System.out.println("equal");
@@ -22,7 +23,18 @@
         if(h1==h2)//The method elif(boolean) is undefined for the type StringPool so not using elif
         {
         System.out.println("both variables pointing to same reference in string pool");
-        
+        }
+        if(h2.equals(h3))
+        {
+            System.out.println("h2 and h3 are equal");
+        }
+        if(h2==h3)
+        {
+            System.out.println("h2 and h3 are referencing to same block in String pool");
+        }
+        if(!(h2==h3))
+        {
+            System.out.println("h2 and h3 are not referencing to same block in String pool");
         }
         else
         {
@@ -31,3 +43,15 @@
 
     }
 }
+/*
+ String pool for above program; 
+|"hansi"|==>h1,h2
+|h2     |==>h3(h3 refers to h2)
+|       |
+|       |
+not in the below manner 
+|"hansi"|==>h1
+|"hasni"|==>h2
+|h2     |==>h3
+
+ */

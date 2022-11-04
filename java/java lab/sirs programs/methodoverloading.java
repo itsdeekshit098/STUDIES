@@ -1,7 +1,9 @@
-class Overload1 {
+class Overload1
+ {
     int a = 0, b = 0;
 
-    void add() {
+    void add() 
+    {
         System.out.println("NO or DEFAULT argument add method, sum= " + (a + b));
     }
 

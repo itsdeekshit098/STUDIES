@@ -11,6 +11,8 @@ constructor:
 
     4)if the constructor has parameters u can give values while creating object itself(refer to program once)
 
+    5)the constructors can  only have public, protected & private are permitted even static is not permitted
+
     diff b/w method and constructor:
     1)obj should be explicitly called but constructor are called immediately when obj is created
     2)in constructor values for constructor parameters are given while creating obj itself (logically as class name and constructor name will be same u can give there itself) but in case of method 

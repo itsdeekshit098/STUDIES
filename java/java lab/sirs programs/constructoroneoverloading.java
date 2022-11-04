@@ -2,7 +2,8 @@ class Generic {
     int a = 0, b = 0;
 
     Generic() {
-        a = b = 1;
+        a = 1;
+        b = 1;
     }
 
     // overloaded constructor

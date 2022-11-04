@@ -1,8 +1,16 @@
-
+//https://www.edureka.co/blog/tostring-in-java/#:~:text=The%20toString%20method%20is%20used,toString()%20method%20is%20called.
 //public string tostring(){}
 
 //getcalss()==prints like  (class Y) when sout(obj.getclass())
 // getClass().getName()===prints pnly name of class without class word ( Y)
+
+//abstract method declaration                 normal method declaration
+//syntax: abstract returntype methodname();    returntype mname()
+  //                                           {
+
+//                                             } 
+
+
 /*
  * Lab Exercise 2
 Programs to implement different types of Inheritance. Implement the following:
@@ -20,12 +28,10 @@ abstract class Shape {
     final double PI = 3.14;
     int shapeName;
 
-    void area() {
+    abstract void area();
 
-    }
-
-    public String
-     toString() {
+    public String toString()
+     {
         return getClass().getName();
     }
 }
@@ -44,7 +50,8 @@ class Rectangle extends Shape {
     double length = sc2.nextDouble();
     double width = sc2.nextDouble();
 
-    void area() {
+    void area()
+    {
         System.out.println(length * width);
     }
 }
