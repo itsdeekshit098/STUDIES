@@ -1,5 +1,6 @@
 /*
  this keyword
+    *we use super to specifiacally access the parent class members and we use this to specifically access child members.
     1)this keyword is mainly used to do something w.r.t to instace fields mainly instance variable
      u can use this to call  1)variables
                              2)methods

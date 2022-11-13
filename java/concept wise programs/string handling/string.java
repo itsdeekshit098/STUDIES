@@ -1,7 +1,12 @@
 /*
  1)string is class that is why s of String is a capital letter 
+ 2)java implements strings as objects of type String
  2)obj of strings are immutable:(refer program to have clarity on below points)
        1)see if u create a string 
+ 4)with respect to strings entry are being made in heap memory that is why u can create the strings using ==>string p1="hasni"
+                          ==>string p1=new string("hansi")
+ but w.r.t int,float or all primitve dt they are created in stack memory
+5)String class is a final class(with no subclasses ) and cant even inherit its feautures as it final class 
  */
 //analysis;
 /*

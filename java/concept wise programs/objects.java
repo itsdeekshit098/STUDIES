@@ -1,5 +1,5 @@
 /*
- object:object is an instance(copy) of a class
+ object:object is an instance(copy) of a class(by new sir object is a member function)
  */
 //we will be having a dout why should we create objects eventhough the method or variables are in same class the reason is very simple as the main method is of static type so it cannot access non static methods so we cant call methods are objects with out creating objs.
     class objects

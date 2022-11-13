@@ -3,7 +3,7 @@
    2 types of declaration or intialization
           1)type arrayname=new type[sizeofarray];
           2)array with known value
-        type arrayname[]={value1,value2,.....,valuen}
+        type arrayname[]={value1,value2,.....,valuen};
  */
 import java.util.*;
 

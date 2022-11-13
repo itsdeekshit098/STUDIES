@@ -8,9 +8,13 @@ import java.util.Scanner;
 class university {
     int a = 100;
     String hansi;
+    void hasni1()
+    {
+        System.out.println("friom method");
+    }
 }
 
-class newkeyword {
+class newKeyword {
     public static void main(String args[]) { // use of new keyword
         university obj = new university(); // new keyword helps us to convert logical existence of university class
                                            // members into physical existence.in clear univeristy() constructor willl be having all the things of unversity class bcz if unparameterized constructor is not defined explicitly then there will be constructor which will have all fieds of class in ligical existence.to make that into physical existence we use new keyword.
@@ -19,5 +23,8 @@ class newkeyword {
         obj.a = sc.nextInt();
         obj.hansi = "kkr";
         System.out.println(obj.a);
+        //
+        new university();//it also creates physical but will not be assigned to any variable
+        new university().hasni1();
     }
 }

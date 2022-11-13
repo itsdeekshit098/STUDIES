@@ -1,6 +1,7 @@
 /*
 constructor:
-          constructor is used used to execute set of instruction 
+          constructor is used used to execute set of instructions
+          constructor will be executed when obj o f that class is created proof for that in ConstructorProof.java 
  constructor:
     1)see we use constructor instead of method when we have a scenario like want to create n no of objects of that method  and intialize or give values to the fields or variables of that method
     everytime 1)creating a object
