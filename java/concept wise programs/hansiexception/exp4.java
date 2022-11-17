@@ -10,6 +10,7 @@ class TooYoung4 extends RuntimeException
     }   
 }
 
+
 class TooOld4 extends RuntimeException
 {
     TooOld4(String s)
