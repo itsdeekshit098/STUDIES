@@ -1,60 +1,83 @@
-/*
- a. A class "Account" with minimum balance 1000rs, deposit() method to deposit amount,
-withdraw() method to withdraw amount and also throws LessBalanceException if an account
-holder tries to withdraw money which makes the balance less than 1000rs.
-b. A class "LessBalanceException" which returns the statement that says "withdraw amount ( __
-rs) is not valid"
-c. A class which creates 2 accounts through which both deposit and withdraw operations are
-performed. Appropriate action has to be taken for LessBalanceException.
- */
-import java.util.Scanner;
-class LessBalanceException extends Exception
+ import java.util.Scanner;
+ class LessBalanceException extends Exception
+ {
+    LessBalanceException(String s)
+    {
+        super(s);
+    }
+ }
+ 
+ class Account
 {
-    LessBalanceException(String r)
-   {
-     System.out.println("withdraw amount is not valid");
-   }
-}
-class Account
-{
-
-    double minbal=1000;
-    Double deposit()
-    {  
-        Scanner sc1=new Scanner(System.in);
+   static double minbal=1000;  //note u can give access specifiers to instance variables not for variable in methods the scope varibles declared in method will be in that mwthod itself
+    static Double deposit()
+    {
         System.out.println("enter the amount to be deposited");
-        double h=sc1.nextDouble();
-        minbal=minbal+h;
+        Scanner sc=new Scanner(System.in);
+        double dep=sc.nextDouble();
+        minbal=minbal+dep;
         return minbal;
     }
-    void withdraw()
+    static void withdraw()
     {
-        //LessBalanceException obj=new LessBalanceException();
-        Scanner sc2=new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
         System.out.println("enter the amount to be withdrawn");
-        double bal=sc2.nextDouble();
-        try
+        double wa=sc.nextDouble();
+        double k;
+        k=minbal-wa;
+        if(k>=1000)
         {
-            if(bal<1000)
+            minbal=minbal-wa;
+        }
+        else{
+            try
             {
-                throw new LessBalanceException("kkr");
+                throw new LessBalanceException("balance will become less than minbal");//note in throw u should call an obj of type throwable(throwable means which are of excepption class)
             }
-            System.out.println("hansi");
+            catch(LessBalanceException ex)
+            {
+                System.out.println(ex.getMessage());//if i comment out this it will be like catch with no mssg to be printed 
+            }
         }
-        catch(LessBalanceException ex)
-        {
-            
-        }
-
-        }
-       
-    public static void main(String args[])
-    {
-        int h=10;
-        System.out.println(h);
-       
-
-        
     }
-    
+    static void balance()
+    {
+        System.out.println("the balance in ur account is"+" "+minbal);
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int c=1;
+        while(c==1)
+        {
+        System.out.println("1:deposit 2:withdraw 3:balance 4:exit");
+        int ch=sc.nextInt();
+        switch(ch)
+        {
+            case 1:
+            {   
+                deposit();
+                break;
+            }
+            case 2:
+            {
+                withdraw();
+                break;
+            }
+            case 3:
+            {
+                balance();
+                System.out.println("jjr");
+                break;
+            }
+            case 4:
+            {
+                c=0;
+                break;
+            }
+
+
+        }
+    }
+    }
 }
