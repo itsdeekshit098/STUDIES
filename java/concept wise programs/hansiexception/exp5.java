@@ -1,5 +1,6 @@
 /*
  see in this program when compared to previous program exp4 what we done is we stopped abnormal termination of program by handling with try-catch but here output is blank no mssg is being dispalyed bcz here the constructor is intialized but but internally so mssg is not displayed and catch block of exception type is triggered as nothing is there nothing is printed or displayed.see if u want to show exception mssg or mssg instead of abnormal termination we uses to print something in catch block or if u want to print what u passed to constructor use obj.getmessage() (refer exp6.java)
+ refer the photo of notepad in photos section for clarity
  */
 class TooYoung5 extends RuntimeException
 {
