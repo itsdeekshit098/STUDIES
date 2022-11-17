@@ -24,7 +24,8 @@ class newKeyword {
         obj.hansi = "kkr";
         System.out.println(obj.a);
         //
-        new university();//it also creates physical but will not be assigned to any variable
-        new university().hasni1();
+        new university();//it also creates physical existence(obj)  but will not be assigned to any variable
+        new university().hasni1();//we can call the method directly like this  also
+        //new university().System.out.println(a); //we cant do these kind of stuff like calling variable so we used to assign the created one to a variable
     }
 }
