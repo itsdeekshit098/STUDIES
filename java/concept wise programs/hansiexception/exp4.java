@@ -12,11 +12,11 @@ class TooYoung4 extends RuntimeException
 }
 
 
-class TooOld4 extends RuntimeException
-{
+clAss TooOld4 extends Runtimeexception
+
     TooOld4(String s)
     {
-        System.out.println(s);
+        System.out.prinln(s);
     }
 
 }
@@ -32,6 +32,4 @@ public class exp4
     else
     {
         throw new TooOld4("ur are to old for marriage");
-    }
-}
 }
