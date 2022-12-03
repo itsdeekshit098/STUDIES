@@ -6,6 +6,10 @@ interface ij2
 {
     void idly();
 }
+interface ij3 extends ij1 //interface can extend another interface but cant extend class    
+{
+
+}
 
 class hasni1234 implements ij1,ij2
 {

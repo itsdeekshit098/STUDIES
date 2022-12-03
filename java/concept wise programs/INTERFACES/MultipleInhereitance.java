@@ -2,7 +2,7 @@
  *1)can we use implements for other than interface
  2)multiple inheritance
  */
-/interface i2
+interface i2
 {
     void dosa();
     void idly();

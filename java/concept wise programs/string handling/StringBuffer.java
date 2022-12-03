@@ -3,8 +3,22 @@
 string vs stringBuffer
 No.	String	StringBuffer
 1)	The String class is immutable.	The StringBuffer class is mutable.
-2)	String is slow and consumes more memory when we concatenate too many strings because every time it creates new instance.	StringBuffer is fast and consumes less memory when we concatenate t strings.
+2)	String is slow and consumes more memory when we concatenate too many strings because every time it creates new instance.	StringBuffer is fast and consumes less memory when we concatenate the strings.
 3)	String class overrides the equals() method of Object class. So you can compare the contents of two strings by equals() method.	StringBuffer class doesn't override the equals() method of Object class.
+/
+String k="hasni";
+        String kk="hasni";
+        if(k.equals(kk))
+        {
+            System.out.println("equal");
+        }
+        else{
+            System.out.println("not equal");
+        }
+        if(k==kk){
+            System.out.println("both variables are refering to same referenc in string pool ");
+        }
+/
 4)	String class is slower while performing concatenation operation.	StringBuffer class is faster while performing concatenation operation.
 5)	String class uses String constant pool.	StringBuffer uses Heap memory
 
@@ -13,7 +27,7 @@ StringBuffer;
 see for ex:line no 22 to 30
 2)if u inseret characters more than the default capacity then jvm on its own increases the capacity of the object of type stringBuffer as per the following formulae ==((oldcapacity*2)+2) refer line 22 to 30 for clarity
 */
- class StringBuffer1 //if u use StringBuffer then it throws error as there is a class StringBuffer already
+ class StringBuffer1 //if u use StringBuffer then it throws error as there is a class StringBuffer already because StringBuffer is class by default already
   {
    public static void main(String args[]) 
    {

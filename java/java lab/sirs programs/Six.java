@@ -35,11 +35,11 @@ class LinearQueue extends Exception        //user-defined exception class “Lin
     void dequeue() throws LinearQueue
     {
         try {
-            if (front < size) {
+            if (front <= rear) {
                 System.out.println("Deleted element is " + q[front++]);//front++ means front=front+1
             }
             else {
-                if(front==size)
+                if(front>rear)
                     front=-1;
                 throw new LinearQueue("No elements to delete");
             }
@@ -68,19 +68,10 @@ public class Six
         q.enqueue(10);
         q.enqueue(20);
         q.enqueue(30);
-        q.enqueue(40);
-        q.enqueue(50);
-        q.display();
-        System.out.println("When tried to put sixth element to full queue");
-        q.enqueue(60);
         q.dequeue();
         q.dequeue();
         q.dequeue();
-        q.display();
         q.dequeue();
         q.dequeue();
-        System.out.println("When tried to remove sixth element from empty queue");
-        q.dequeue();
-        q.display();
     }
 }

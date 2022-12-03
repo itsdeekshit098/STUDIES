@@ -1,0 +1,15 @@
+/*
+ MULTITASKING:(all different process to execute simultaneously is called as multitasking )
+two types of multitaasking:      
+        mutitasking of processes    :OS
+        multitasking using  thread  :
+
+        IF ANY application is running then if u want something to happen in background w.r.t that app that work can be given to thread(here multitasking is going on bcz in background simultaneously)
+THREAD)))))))))))))
+
+Thread: individual working component
+*IMP:main thread and main method are different see for ex there is mainmethod that main method will be loaded by jvm onece mainmethod is identified by jvm it will initiate what is called as main thread.now main thread will take the responsibily of executing what all instructions are there with respect to main method
+SUMMARY:JVM looks for main method then intiates main thread then main thread should look after everthing in the main method
+*even if u see the exception mssg for exception of a element in main method will show exception mssg like exception in thread main not like exception in main thread
+
+
