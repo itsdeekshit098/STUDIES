@@ -1,0 +1,16 @@
+why constructor 
+    to declare or assign values while creation of object itself instead of creating and assigning each value to each variable explicitly .
+
+
+Rules for writing constructors are as follows:
+
+The constructor(s) of a class must have the same name as the class name in which it resides.
+A constructor in Java can not be abstract, final, static, or Synchronized.
+Access modifiers can be used in constructor declaration to control its access i.e which other class can call the constructor.
+
+what all we can do in constructors:
+    1)can deaclare or initialize variable values
+    2)can print somthinh
+    NOTE:cant do 
+        1)cant declare methods in a constructor
+        SS
