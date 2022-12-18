@@ -1,3 +1,6 @@
+/*
+ static block is executed during the class load event itself
+ */
 public class static_block 
         {
 
@@ -14,3 +17,5 @@ public class static_block
 				
 			}
 		}
+
+

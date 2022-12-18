@@ -27,30 +27,26 @@ class hi {
 }
 
 // #final method
-class trg {
+class trg 
+{
     final void hansi12() {
         System.out.println("kkr");
     }
-    // overriding in same class
-    /*
-     * void hansi12()
-     * 
-     * System.out.println("kkr1");
-     * }
-     */
 }
+
 // overriding in other class
-/*
- * class trg2
- * {
- * void hansi12()
- * {
- * System.out.println("kkr12");
- * 
- * }
- * }
- * 
+/* 
+ class trg2 extends trg
+ {
+ void hansi12()
+ {
+ System.out.println("kkr12");
+ 
+ }
+ }
  */
+ 
+ 
 
 // #final class:
 

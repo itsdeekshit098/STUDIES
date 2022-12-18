@@ -30,6 +30,9 @@ class tdr2 implements outer
 public class NestedInterface 
 {
     tdr obj=new tdr();
-    obj.kkr21();
+    //obj.kkr21();
+    //obj.kkr21();
     tdr2 obj1=new tdr2();
+    obj1.kkr22();
+
 }

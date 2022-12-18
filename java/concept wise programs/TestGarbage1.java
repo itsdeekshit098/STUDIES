@@ -12,7 +12,7 @@
     //the garbage collector removes only objects created with new operators
     public class TestGarbage1
     {    
-    public void finalize()
+    protected void finalize()
     {
         System.out.println("object is garbage collected");
     }  
@@ -24,6 +24,7 @@
      s1=null;  //unreferenceing s1
      System.out.println("unreferencing s2");
      s2=null;  
+     int k;
       //calling garbage collector explicitly
       System.gc();
     }  
