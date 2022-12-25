@@ -54,8 +54,8 @@ final class hansi {
     int x = 10;
 }
 
-/*class hansi1 extends hansi {
+class hansi1 extends hansi {
     void kkr() {
         x = 20;
     }
-}*/
+}

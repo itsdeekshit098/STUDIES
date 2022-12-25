@@ -3,7 +3,7 @@ class TooYoung extends RuntimeException
 {
     TooYoung(String s)
     {
-        System.out.println(s);
+        System.out.println(s);//try super(s) instead of this
     }   
 }
 
@@ -24,11 +24,14 @@ public class EHS1
         System.out.println("fcuk");
         throw new TooYoung("llr");
         /*
-        how throws works:
+        how throw works:
           see in throw u need to pass an throwable obeject(throwable object in the sense which throws exception so as all the exception classes are of throwable type so here TooYoung extends RuntimeException so it is also a throwable object).
         see here we are calling constructor::
           the constructor is specified in the class TooYoung and it will be called
          */
+    }
+    else{
+        throw new TooOld();
     }
 
     }

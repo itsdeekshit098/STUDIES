@@ -14,7 +14,7 @@ class EH4
             {
                 System.out.println("AIOB from inner catch block");
             }
-            catch(Exception e)
+            catch(NullPointerException eNullPointerException)
             {
                 System.out.println("error from Exception");
             }

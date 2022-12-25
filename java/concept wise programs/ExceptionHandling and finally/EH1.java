@@ -12,7 +12,7 @@ class EH1
 {
     public static void main(String[] args) 
     {
-        System.out.println(1/0);//it shows exception 
+        //System.out.println(1/0);//it shows exception 
         try
         {
             System.out.println(1/0);//AS THIS exception is in try block so this will be handled by catch block with the exception class of this type
@@ -22,7 +22,7 @@ class EH1
         {
             System.out.println("division cannot be done by zero");
         }
-       System.out.println(1/0);//it shows exception 
+       //System.out.println(1/0);//it shows exception 
         
     }
     
