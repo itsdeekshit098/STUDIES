@@ -50,7 +50,7 @@ programatic terms on interface:
             1)interface is an abstract kind of thing by default
             2)the methods or variable declared in interface are final(if implemented see as method mostly will be abstract methods so can implement.for ex see dafault method used in interface cant be modified in implemented class bcz everything in interface are final),public by default eventhough u does specific acces specifier public is assingned not default as in classes
 
-            3)it can contain abstract methods,default method
+            3)it can contain abstract methods,default method,static method
             
-            4)can extend interface directly  by extends(bcz extends can extends of type classes not interfaces) for sure it need to be implemented in any class by implements from there we can extend it to any other class where we extends a type class not inteterface
+            4)we cant extend interface directly  by extends(bcz extends can extends of type classes not interfaces) for sure it need to be implemented in any class by implements from there we can extend it to any other class where we extends a type class not inteterface
  */

@@ -3,12 +3,12 @@ import java.lang.Math;
 
 class shape
 {
-    int dimension;
+    double dimension;
     shape()
     {
         
     }
-    shape(int dm)
+    shape(double dm)
     {
         this.dimension=dm;
         System.out.println(this.dimension);
