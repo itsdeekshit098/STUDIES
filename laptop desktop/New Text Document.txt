@@ -1,0 +1,3 @@
+bcz folder is empty
+bcz now folder is not empty
+bcz we modified the text in text file

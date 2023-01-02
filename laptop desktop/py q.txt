@@ -1,0 +1,20 @@
+Module- 1
+1.Write python program for prime number, factorial and fibonacci                        
+2.different types of python operators and expression with suitable example
+3.what is mean by python indentation
+4.write python program for Armstrong Number
+5.Explain details python features in detail
+6. Explain detailsabout python applications
+
+Module- 2
+1.short notes on:
+a)Python list and tuples with example
+b)Python set and dictionary with example
+2.define python list slicing operations
+3.Differentiate  the  list  and  dictionary  data  types  of  python  by  their 
+characteristics along with example in brief.
+4.difference between the  python list  and  dictionary  data  types by  their characteristics along with example
+
+Module- 3
+1.Short notes on:
+the characteristics of NumPy and Pandas.

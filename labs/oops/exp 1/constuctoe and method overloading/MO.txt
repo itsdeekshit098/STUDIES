@@ -1,0 +1,30 @@
+why  not
+    1)void hansi()
+      int hansi(int k) does refer to method overloading
+      see eventhough the method is oveloaded first of all the method int hansi and void hansi are different bcz of there return Types.so it shows error like using hansi again and int hansi as it is being used to name void method before
+           =====>it also proves that void methods and int methods are not same
+
+
+Types of method overloading:
+    Different Scenario’s
+         •Method Overloading by changing the no. of arguments:
+         •Method Overloading by changing data type of argument:
+         •Method Overloading changing the return type of method:(Method Overloading not possible by changing the return type of method)
+         •Overloading main() method:
+                    class Overloading1
+                    {
+                        public static void main(int a)
+                    {
+                        System.out.println(a);
+                    }
+                    
+                    public static void main(String args[])
+                    {
+                        System.out.println("main() method invoked");
+                        main(10);
+                    }
+                    }
+         •Method Overloading with TypePromotion:
+         •Method Overloading with TypePromotion of arguments if
+         matching found:
+         •Method Overloading with TypePromotion in case ambiguity

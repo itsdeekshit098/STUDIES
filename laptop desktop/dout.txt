@@ -1,0 +1,7 @@
+1)at 40.20 said that compiler will kick u is that crct
+https://www.youtube.com/watch?v=Xhz0q_l6iug&t=1975s
+
+2)is instance of class and obj is smae or else there is difference
+
+3)at 40.30 in #20 it if i give three paramaetres then the constructor with three parameters isnt called it went to constructor with four parameters and printed null for that last value
+https://www.youtube.com/watch?v=MsWPi_Qpask

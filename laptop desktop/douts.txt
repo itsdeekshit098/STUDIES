@@ -1,0 +1,4 @@
+1)naveens dout
+2)public static void main (String[] args) throws java.lang.Exception
+3)https://www.codechef.com/submit/NONNEGPROD  how to add elements to array 
+4)whats the similar one to try except in java

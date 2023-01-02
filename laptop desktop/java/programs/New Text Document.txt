@@ -1,0 +1,6 @@
+public class Switch
+{
+	public static void main(String args[])
+	{
+		System.output.println("1:hi 2:bye 3:hi-bye 4:noa");
+		
