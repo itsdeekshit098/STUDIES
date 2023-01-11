@@ -6,6 +6,6 @@ class practice
     }
     void hasni(int k)
     {
-
+   bg 
     }
 }
