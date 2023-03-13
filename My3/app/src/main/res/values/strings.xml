@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My3</string>
+    <string name="button1">click on me</string>
+    <string name="title">Data Science</string>
+</resources>
