@@ -1,0 +1,2 @@
+System.out.println();==>will prints a line 
+System.out.print("\n");==> makes the cursor or console to move to next line

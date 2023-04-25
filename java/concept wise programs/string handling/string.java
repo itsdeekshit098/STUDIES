@@ -4,7 +4,7 @@
  2)obj of strings are immutable:(refer program to have clarity on below points)
        1)see if u create a string 
  4)with respect to strings entry are being made in heap memory that is why u can create the strings using ==>string p1="hasni"
-                          ==>string p1=new string("hansi")
+                          ==>string p1=new string("hansi")ˀ
  but w.r.t int,float or all primitve dt they are created in stack memory
 5)String class is a final class(with no subclasses ) and cant even inherit its feautures as it final class 
  */
@@ -12,12 +12,13 @@
 /*
  1)the whole thing is u cant change values of string objects directly the changed values will or can be assigned to other objects
 
- 2)u will be having a dout how to change value of string directly it is possible if u use string buffer to initialize value refer to string buffer program for clarity
+ 2)u will be having a dout how to change value of string directly. it is possible if u use string buffer to initialize value refer to string buffer program for clarity
  */
-public class string {
+ public class string {
     public static void main(String args[])
     {
         String h="hansi";
+        //or
 //==.>IMP AS STRING  is also CLASS it can be initilalized in below way direclty this proves string is class
         String obj=new String("ahnsi");
         System.out.println(obj);

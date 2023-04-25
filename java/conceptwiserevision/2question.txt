@@ -1,0 +1,4 @@
+1)why java uses 2 bytes for character
+    java uses Unicode system not ASCII code system.in unicode system char uses 2 bytes so java so java also uses 2 byte for characters.ts value-range lies between '\u0000' (or 0) to '\uffff' (or 65,535 inclusive)    
+2)why cant we convert char to string
+    bcz string is nonprimitve while char is primitive so typecasting can be done withing primitive data types so that is the reason why u cant do that.

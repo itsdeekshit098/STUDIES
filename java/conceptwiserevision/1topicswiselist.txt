@@ -5,4 +5,9 @@ context1)impmethods
 3)typecasting1.java
 4)operators.java
 5)givinginputoutput.java
-6)conditionalstatements.java
+6)csIfElseElseIF.java
+7)csswitch.java
+8)forloopWITHbreakContinue.java
+9)whileloop.java
+10)dowhileloop.java
+11)patternquestionfolder
