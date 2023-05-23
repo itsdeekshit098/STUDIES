@@ -59,10 +59,10 @@ select * from student inner join course; -- NOTE:both inner join and join are sa
 so after joining rows of two tables,then based on condition for which rows condition is satisfied those values only 
 be displayed in right table but in left tale all are displayed NOTE THIS JOIN  */
 
-select * from student  left join course on student.s_id=course.c_id;
+select * from student  left outer join course on student.s_id=course.c_id; #NOTE:left outer join and left join are same
 /* right join(right outer join) value of left table are displayed only when condition is satisfied but all values of 
 righ ttable are displayed*/
-select * from student right join course on student.s_id=course.c_id;
+select * from student right outer join course on student.s_id=course.c_id;
 
 # theta join(>=,<=,>,<)
 select * from student join course on student.c_id<=course.c_id;

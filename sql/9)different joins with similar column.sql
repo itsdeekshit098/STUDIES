@@ -68,7 +68,7 @@ select * from student inner join course; -- NOTE:both inner join and join are sa
             are displayed
 */
 
-select * from student  left join course on student.c_id=course.c_id;
+select * from student  left outer join course on student.c_id=course.c_id;
 /* right outer join: 
 			1)firstly merges the rows of 2 table like
 						1st row of 1st table +(with) 1st row of 2nd table

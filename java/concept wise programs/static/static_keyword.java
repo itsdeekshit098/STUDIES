@@ -7,7 +7,7 @@
 		-- Block
         --class	 
         NOTE:fields or members of method cannot be declared as staitic
-2)if u declare something as static u can call that without creating a object so:
+2)if u declare something as static u can call that without creating a object  so:
                                 The static keyword belongs to the class than instance of the class
 3)w.r.t to compiler the compiler scan for static fields first before going to main method.the static fields are loaded during class load event 
 
@@ -25,7 +25,7 @@
     40
        1)first thing if u create obj of class it doesnt copies the static fields and keeps that copies in obj created.the obj will be having access to manipulate the static fields not to clone and keep in objs.
        2)see in above ex x is static with value 20 AND WITH some xxx memory location is allocated to it 
-       and then object of class is created and obj.x is changed to 40 it doesnt mean other 20 copied to   obj.x with other xxx memory location and changed 20 to 40.it means value at xxx loacation is changed to 40 
+       and then object of class is created and obj.x is changed to 40 it doesnt mean other 20 copied to   obj.x with other xxx memory location and changed 20 to 40.it means value at xxx loacation is changed to 40 (it means that obj.x doesnt creates instance of x as x is static)
        3) hence this proves that only one copy of static fields are maintained
 5)The static keyword is used mainly for memory management.(above one is example for that)
 
@@ -43,12 +43,14 @@ STATIC BLOCK:
 
 
  */
+//        program for static variable refer static_variable.java  program for better understanding
 class static_keyword
 {
-    static int x=10;
+    static int x=10;  //static variable
     public static void main(String args[])
     {
         static_keyword obj=new static_keyword();
+        System.out.println(x);
         System.out.println("value of x before manupulating = "+x);
         obj.x=11;
         System.out.println("value of obj.x= "+x);
