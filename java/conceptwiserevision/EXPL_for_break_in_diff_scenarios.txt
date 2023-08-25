@@ -1,0 +1,70 @@
+In Java, the `break` statement is used to terminate the execution of a loop or a switch statement. The scope of the `break` statement depends on the context in which it is used. Let's examine the scopes of the `break` statement in different scenarios:
+
+1. `break` in a loop:
+   - When used within a loop (such as `for`, `while`, or `do-while`), the `break` statement immediately terminates the loop and transfers control to the statement immediately following the loop.
+   - The scope of the `break` statement is limited to the innermost loop enclosing it.
+   - Example:
+     ```java
+     for (int i = 0; i < 5; i++) {
+         if (i == 3) {
+             break; // terminates the loop
+         }
+         System.out.println(i);
+     }
+     System.out.println("Loop terminated");
+     ```
+     In this example, when `i` becomes equal to 3, the `break` statement is executed, terminating the loop. The output will be:
+     ```
+     0
+     1
+     2
+     Loop terminated
+     ```
+
+2. `break` in a nested loop:
+   - When used in a nested loop (a loop inside another loop), the `break` statement terminates the innermost loop in which it is located.
+   - The scope of the `break` statement is limited to the innermost loop enclosing it.
+   - Example:
+     ```java
+     for (int i = 0; i < 3; i++) {
+         for (int j = 0; j < 3; j++) {
+             if (j == 1) {
+                 break; // terminates the inner loop
+             }
+             System.out.println(i + " " + j);
+         }
+     }
+     ```
+     In this example, when `j` becomes equal to 1, the `break` statement is executed, terminating the inner loop. The outer loop continues executing for the remaining iterations. The output will be:
+     ```
+     0 0
+     1 0
+     2 0
+     ```
+
+3. `break` in a switch statement:
+   - When used within a switch statement, the `break` statement is used to exit the switch block.
+   - The scope of the `break` statement is limited to the switch statement.
+   - Example:
+     ```java
+     int choice = 2;
+     switch (choice) {
+         case 1:
+             System.out.println("Choice 1");
+             break;
+         case 2:
+             System.out.println("Choice 2");
+             break; // exits the switch block
+         case 3:
+             System.out.println("Choice 3");
+             break;
+     }
+     System.out.println("Switch statement finished");
+     ```
+     In this example, when `choice` is 2, the code within the corresponding case block is executed, and then the `break` statement is encountered, causing the switch block to be exited. The output will be:
+     ```
+     Choice 2
+     Switch statement finished
+     ```
+
+In summary, the scope of the `break` statement depends on its context. Within a loop, it terminates the loop and continues executing the statements outside the loop. In a nested loop, it terminates the innermost loop. In a switch statement, it exits the switch block.

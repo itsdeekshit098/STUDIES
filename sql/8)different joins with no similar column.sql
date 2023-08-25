@@ -47,13 +47,24 @@ select * from student inner join course on student.c_id=course.c_id;
 
 similarly in all other cases of with and without condition statements if u compare u wont get same output
 */
-
+select * from student;
+select * from course;
 -- cross join 
 select * from student join course; -- here each attributes of course will me merged with all attributes of student
 -- inner join
-select * from student join course on student.c_id=course.c_id; -- returns rows by combining attributes of both tables when the condition is satisfied
+select * from student join course on student.s_id=course.c_id; -- returns rows by combining attributes of both tables when the condition is satisfied
 -- join
-select * from student inner join course; -- NOTE:both inner join and join are same 
+select * from student inner join course; 
+select * from student cross join course;-- NOTE:both inner join and join and cross join are same 
+
+-- self join(syntax is different from join,cross join,inner join)
+select * from student,course where student.s_id=course.c_id;
+select * from student,course on student.s_id=course.c_id; #cannot use on
+
+-- full outer join
+select  student.s_id from student full outer join course on student.s_id=course.c_id;
+SELECT * FROM Customers FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
 
 /* left outer join: returns the values of left table(means in code (student left join course ) here student is left 
 so after joining rows of two tables,then based on condition for which rows condition is satisfied those values only 

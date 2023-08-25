@@ -44,9 +44,11 @@ SELECT * FROM users WHERE name LIKE "J%";
 SELECT id,email FROM users WHERE name LIKE "J%";
 SELECT * FROM users WHERE name LIKE "__r__L%";	-- % represents with any number of character after the L
 SELECT * FROM users WHERE name LIKE "__r__L__"; -- _ after L represents a name with two character afer the L
+SELECT * FROM users WHERE name LIKE "J[^a-z]h%";
 -- below queries are not showing appropriate output let me ask sir about it
 SELECT * FROM users WHERE name LIKE "J[ao]h%";
 SELECT * FROM users WHERE name LIKE "J[a-z]h%";
+
 
  
  

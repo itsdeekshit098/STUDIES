@@ -4,6 +4,9 @@ context1)impmethods
 2)datatypes
 3)typecasting1.java
 4)operators.java
+   4.1)increment_decrement.java
+   4.2)operators1.jpeg
+   4.3)operators2.jpeg
 5)givinginputoutput.java
 6)csIfElseElseIF.java
 7)csswitch.java

@@ -60,5 +60,6 @@ SELECT * FROM orders1 ORDER BY order_date DESC;
 
 
 -- ORDER BY multiple columns 
-SELECT * FROM orders1 ORDER BY order_date,total_amount; -- note on 01 of 2nd month 2 order of amount 75,250 as nothing is specified so orders by ASC so 75 is displayed first
+SELECT * FROM orders1 ORDER BY order_date,total_amount ; -- note on 01 of 2nd month 2 order of amount 75,250 as nothing is specified so orders by ASC so 75 is displayed first
 SELECT * FROM orders1 ORDER BY order_date ASC,total_amount DESC; -- IN THIS CASE ALSO ON 01 DATE OF 2ND MONTH THERE ARE TWO ORDERS AS WE GAVE DATE ASC AND AMOUNT DESC SO ON 01-02 THE ORDER WITH HIGH AMOUNT DISPLAYED FIRST AND THE OTHER IS DISPLAYED NEXT
+SELECT * FROM orders1 ORDER BY order_date,total_amount DESC; -- NOTE THIS HERE IT IS LIKE CONSIDERING ORDER OF order_date as asc as nothing is specified and as total_amount we specified desc it is ok with it
