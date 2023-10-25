@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "String_args_array_in_mainmethod_takes_stringdt_values",
+            "request": "launch",
+            "mainClass": "tobeknowfirst.String_args_array_in_mainmethod_takes_stringdt_values",
+            "projectName": "java_6399e169"
+        },
+        {
+            "type": "java",
+            "name": "CommandLineArguments",
+            "request": "launch",
+            "mainClass": "CommandLineArguments",
+            "projectName": "java_6399e169"
+        },
+        {
+            "type": "java",
             "name": "LABELLED_FORLOOP",
             "request": "launch",
             "mainClass": "conceptwiserevision.LABELLED_FORLOOP",

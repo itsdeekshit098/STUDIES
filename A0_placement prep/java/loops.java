@@ -4,7 +4,10 @@ public class loops
     public static void main(String[] args) 
     {
         Scanner sc=new Scanner(System.in);
-        
+        /**
+         * 
+         * 
+         */
         
         // // for(byte a=1;a<10;a++)
         // // {

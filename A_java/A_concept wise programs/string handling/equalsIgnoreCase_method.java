@@ -1,4 +1,4 @@
-public class pr {
+public class equalsIgnoreCase_method {
     
         public static void main(String args[]) {
         String s1 = "Hello";
