@@ -58,10 +58,15 @@ button:hover {
  <label for="psw"><b>Password</b></label>
  <input type="password" placeholder="Enter Password" name="psw" required>
 
- <button type="submit">Sign In</button>
+ <button type="submit" onclick="navigateToPage() ">Sign In</button>
 
- <button type="button" class="signin">Sign Up</button>
 </div>
+<script>
+    function navigateToPage() {
+      // Replace 'target-page.html' with the actual name of the HTML file you want to navigate to
+      window.location.href = 'hrnxt1.html';
+    }
+  </script>
 
 </body> 
 </html>
