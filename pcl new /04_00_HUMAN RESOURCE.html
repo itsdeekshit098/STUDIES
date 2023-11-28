@@ -50,7 +50,7 @@ button:hover {
 <div class="container">
     
     <center><img src="WhatsApp Image 2023-11-28 at 13.15.30.png" alt="Description of the image" width="350" height="100"></center>
-    <center><h2>SERVICE PROVIDER</h2></center>
+    <center><h2>HR</h2></center>
     <b></b>
  <label for="uname"><b>Email</b></label>
  <input type="text" placeholder="Enter Email" name="uname" required>
@@ -58,18 +58,23 @@ button:hover {
  <label for="psw"><b>Password</b></label>
  <input type="password" placeholder="Enter Password" name="psw" required>
 
- <button type="submit" onclick="navigateToPage()">Sign In</button>
+ <button type="submit" onclick="navigateToPage() ">Sign In</button>
+ <button onclick="signInWithGoogle()">Sign in with Google</button>
 
-
-
- 
 </div>
-
+<script>
+    function signInWithGoogle() {
+        // Redirect to the Google sign-in page
+        window.location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=592736146673-cfbngsiuop00o9mmtfh5v1a3i4cr6qor.apps.googleusercontent.com&redirect_uri=http://127.0.0.1:5500/04_01_hrnxt1.html&response_type=code&scope=email%20profile&approval_prompt=force&access_type=offline';
+    }
+</script>
 <script>
     function navigateToPage() {
       // Replace 'target-page.html' with the actual name of the HTML file you want to navigate to
-      window.location.href = 'servicenxt1.html';
+      window.location.href = 'hrnxt1.html';
+
     }
   </script>
+
 </body> 
 </html>

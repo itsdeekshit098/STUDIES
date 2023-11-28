@@ -6,14 +6,35 @@
   <title>User Role Selection</title>
   <style>
     body {
-      background-image: url();
-      background-size: cover;
+      background-image: url("logo of ss logi 0.png");
+      background-position: center;
+      background-size: 100%;
       background-repeat: no-repeat;
       margin: 0;
       padding: 0;
       font-family: 'Arial', sans-serif;
     }
     .role-block {
+  width: 200px;
+  height: 200px;
+  margin: 0 10px 10px 10px; /* top right bottom left */
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  background-image: url("emp_logo.png");
+  background-size:contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+    .role-block1 {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      display: inline-block;
+    }
+    .role-block2 {
       width: 200px;
       height: 200px;
       margin: 10px;
@@ -91,20 +112,20 @@ button:hover {
   
   <a href="EMPLOYEE LOGIN.html" id="employeeBlockLink">
   <div id="employeeBlock" class="role-block">
-    <h3>Employee</h3>
-    <p>This is the Employee block. Additional information can be added here.</p>
+    <h3 style="background-color: #2980b9; size: 20px; background-size: contain;" >Employee</h3>
   </div>
   </a>
   <a href="SERVICE PROVIDERLOGIN.html" id="employeeBlockLink">
-  <div id="serviceProviderBlock" class="role-block">
+  <div id="serviceProviderBlock" class="role-block1">
     <h3>Service Provider</h3>
     <p>This is the Service Provider block. Additional information can be added here.</p>
   </div>
 </a>
 
-<a href="HUMAN RESOURCE.html" id="employeeBlockLink">
-  <div id="hrBlock" class="role-block"> 
+<a href="HUMAN RESOURCE.html" id="employeeBlockLink1">
+  <div id="hrBlock" class="role-block2"> 
     <h3>Human Resources</h3>
+    
     <p>This is the Human Resources block. Additional information can be added here.</p>
   </div>
 </a>
