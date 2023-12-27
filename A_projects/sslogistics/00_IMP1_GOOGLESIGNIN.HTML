@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with Google</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            background-color: #4285f4;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Login with Google</h2>
+
+    <!-- "Sign in with Google" button -->
+    <button onclick="signInWithGoogle()">Sign in with Google</button>
+</div>
+
+<script>
+    function signInWithGoogle() {
+        // Redirect to the Google sign-in page
+        window.location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=592736146673-cfbngsiuop00o9mmtfh5v1a3i4cr6qor.apps.googleusercontent.com&redirect_uri=http://127.0.0.1:5500/02_01_empnxt1.html&response_type=code&scope=email%20profile&approval_prompt=force&access_type=offline';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        table{
+            border-collapse:collapse;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: solid;
+        }
+        th,td{
+            border-style:solid;
+            border-width: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        <form action="/addtask" method="POST">
+            <label for="task">ADD TASK:</label><br>
+                <input type="text" name="task"  placeholder="give u task">
+                <input type="submit" value="+">
+        </form>
+    </div>
+
+    <div>
+        <table>
+            <tr>
+                <th>TASKS</th>
+            </tr>
+            {% for i in tasks%}
+            <tr>   
+                <td>{{i.value}}</td> 
+                <td id="delete">
+                    <form action="{{url_for('delete',task_id=i.id)}}" method="post">
+                        <input type="submit" value="delete">
+                    </form>
+                </td>
+            </tr>
+            {%endfor%}
+
+        </table>
+    </div>
+
+</body>
+</html>

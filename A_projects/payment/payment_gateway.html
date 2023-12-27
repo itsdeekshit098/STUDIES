@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay Payment</title>
+    <!-- Include Razorpay SDK -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+    <h1>Amount to be Paid: $100</h1>
+
+    <!-- Razorpay payment button -->
+    <button onclick="openRazorpay()">Pay Now</button>
+
+    <script>
+        // Replace 'your_key_id' with your Razorpay key
+        var razorpayKey = 'your_key_id';
+
+        function openRazorpay() {
+            var options = {
+                key: razorpayKey,
+                amount: 10000, // Amount in paise (100 paise = 1 INR)
+                currency: 'USD',
+                name: 'Your Company Name',
+                description: 'Payment for your product/service',
+                image: 'https://your-logo-url.png', // Replace with your company logo
+                handler: function(response) {
+                    alert('Payment successful! Payment ID: ' + response.razorpay_payment_id);
+                },
+                prefill: {
+                    name: 'John Doe',
+                    email: 'john.doe@example.com',
+                    contact: '1234567890'
+                },
+                notes: {
+                    address: 'Razorpay Corporate Office'
+                },
+                theme: {
+                    color: '#F37254'
+                }
+            };
+
+            var razorpayInstance = new Razorpay(options);
+            razorpayInstance.open();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Details</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Details Entered</h2>
+    <table>
+        <tr>
+            <th>Trip ID</th>
+            <th>Driver Name</th>
+            <th>Vehicle Number</th>
+            <th>Date and Time</th>
+            <th>Starting Kilometer</th>
+            <th>Ending Kilometer</th>
+        </tr>
+        {% for trip in trips %}
+            <tr>
+                <td>{{ trip.TripID }}</td>
+                <td>{{ trip.DriverName }}</td>
+                <td>{{ trip.VehicleNumber }}</td>
+                <td>{{ trip.DateTime }}</td>
+                <td>{{ trip.StartingKilometer }}</td>
+                <td>{{ trip.EndingKilometer }}</td>
+                <td>
+                    <form action="{{ url_for('delete', trip_id=trip.TripID) }}" method="post">
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

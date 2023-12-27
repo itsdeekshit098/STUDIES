@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    width: 400px;
+    padding: 16px;
+    background-color: #f1f1f1;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+}
+.signin {
+    background-color:#4CAF50;
+}
+.signin:hover {
+    background-color:#4CAF50;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+    
+    <center><img src="WhatsApp Image 2023-11-28 at 13.15.30.png" alt="Description of the image" width="350" height="100"></center>
+    <center><h2>SERVICE PROVIDER</h2></center>
+    <b></b>
+ <label for="uname"><b>Email</b></label>
+ <input type="text" placeholder="Enter Email" name="uname" required>
+
+ <label for="psw"><b>Password</b></label>
+ <input type="password" placeholder="Enter Password" name="psw" required>
+
+ <button type="submit" onclick="navigateToPage()">Sign In</button>
+ <button onclick="signInWithGoogle()">Sign in with Google</button>
+
+
+
+ 
+</div>
+
+
+<script>
+    function signInWithGoogle() {
+        // Redirect to the Google sign-in page
+        window.location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=592736146673-cfbngsiuop00o9mmtfh5v1a3i4cr6qor.apps.googleusercontent.com&redirect_uri=http://127.0.0.1:5500/03_01_servicenxt1.html&response_type=code&scope=email%20profile&approval_prompt=force&access_type=offline';
+    }
+</script>
+
+<script>
+    function navigateToPage() {
+      // Replace 'target-page.html' with the actual name of the HTML file you want to navigate to
+      window.location.href = 'servicenxt1.html';
+    }
+  </script>
+</body> 
+</html>

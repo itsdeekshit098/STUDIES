@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Role Selection</title>
+  <style>
+    body {
+      background-image: url("logo of ss logi 0.png");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    .role-block {
+  width: 200px;
+  height: 200px;
+  margin: 0 10px 10px 10px; /* top right bottom left */
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  background-image: url("emp_logo.png");
+  background-size:contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+    .role-block1 {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      display: inline-block;
+    }
+    .role-block2 {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      display: inline-block;
+    }
+    body {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#userRole {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.role-block {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #3498db;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: #3498db;
+}
+
+p {
+  color: #555;
+}
+
+/* Style the submit button */
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+  </style>
+</head>
+<body>
+
+  <h2>Select Your Role</h2>
+
+  
+  <a href="EMPLOYEE LOGIN.html" id="employeeBlockLink">
+  <div id="employeeBlock" class="role-block">
+    <h3 style="background-color: #2980b9; size: 20px; background-size: contain;" >Employee</h3>
+  </div>
+  </a>
+  <a href="SERVICE PROVIDERLOGIN.html" id="employeeBlockLink">
+  <div id="serviceProviderBlock" class="role-block1">
+    <h3>Service Provider</h3>
+    <p>This is the Service Provider block. Additional information can be added here.</p>
+  </div>
+</a>
+
+<a href="HUMAN RESOURCE.html" id="employeeBlockLink1">
+  <div id="hrBlock" class="role-block2"> 
+    <h3>Human Resources</h3>
+    
+    <p>This is the Human Resources block. Additional information can be added here.</p>
+  </div>
+</a>
+
+  <script>
+    function displayRole() {
+      var selectedRole = document.getElementById("userRole").value;
+
+      // Hide all role blocks
+      document.getElementById("employeeBlock").style.display = "none";
+      document.getElementById("serviceProviderBlock").style.display = "none";
+      document.getElementById("hrBlock").style.display = "none";
+
+      // Display the selected role block
+      document.getElementById(selectedRole + "Block").style.display = "inline-block";
+    }
+  </script>
+
+</body>
+</html>

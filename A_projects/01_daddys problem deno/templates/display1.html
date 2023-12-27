@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Details</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .filter-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Details Entered</h2>
+
+    <!-- Vehicle Number Filter -->
+    <div class="filter-container">
+        <label for="vehicleFilter">Select Vehicle Number:</label>
+        <select id="vehicleFilter" onchange="filterByVehicle()">
+            <option value="">All Vehicles</option>
+            {% for vehicle in unique_vehicles %}
+                <option value="{{ vehicle }}">{{ vehicle }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <!-- Table to Display Details -->
+    <table id="detailsTable">
+        <tr>
+            <th>Trip ID</th>
+            <th>Driver Name</th>
+            <th>Vehicle Number</th>
+            <th>Date and Time</th>
+            <th>Starting Kilometer</th>
+            <th>Ending Kilometer</th>
+        </tr>
+        {% for trip in trips %}
+            <tr class="detailsRow" data-vehicle="{{ trip.VehicleNumber }}">
+                <td>{{ trip.TripID }}</td>
+                <td>{{ trip.DriverName }}</td>
+                <td>{{ trip.VehicleNumber }}</td>
+                <td>{{ trip.DateTime }}</td>
+                <td>{{ trip.StartingKilometer }}</td>
+                <td>{{ trip.EndingKilometer }}</td>
+                <td>
+                    <form action="{{ url_for('delete', trip_id=trip.TripID) }}" method="post">
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <script>
+        function filterByVehicle() {
+            var selectedVehicle = document.getElementById("vehicleFilter").value;
+            var rows = document.getElementsByClassName("detailsRow");
+
+            for (var i = 0; i < rows.length; i++) {
+                var row = rows[i];
+                var vehicleNumber = row.getAttribute("data-vehicle");
+
+                if (selectedVehicle === "" || selectedVehicle === vehicleNumber) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
