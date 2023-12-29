@@ -55,7 +55,7 @@ def addtask():
 
 
 @app.route("/delete/<int:task_id>",methods=["GET","POST"])
-def delete(task_id):
+def deleteabcc(task_id):
     id_no=task_id
     connection=conn()
     cursor=connection.cursor()

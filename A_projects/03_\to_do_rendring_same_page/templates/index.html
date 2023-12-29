@@ -40,7 +40,7 @@
             <tr>   
                 <td>{{i.value}}</td> 
                 <td id="delete">
-                    <form action="{{url_for('delete',task_id=i.id)}}" method="post">
+                    <form action="{{url_for('deleteabcc',task_id=i.id)}}" method="post">
                         <input type="submit" value="delete">
                     </form>
                 </td>
