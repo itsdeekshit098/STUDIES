@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- the below style ensures to display indicators in carousel -->
+    <style>
+        /* Add CSS to style the carousel indicators */
+        [data-te-carousel-indicators] button {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+    
+        /* Style the active indicator */
+        [data-te-carousel-indicators] button[aria-current="true"] {
+            background-color: #ffffff;
+        }
+    </style>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<!-- Custom CSS for multiple images carousel -->
+<style>
+    /* Custom CSS for multiple images carousel */
+    .carousel-container {
+        max-width: 800px; /* Adjust the max-width as needed */
+        margin: auto;
+    }
+    .carousel-item {
+        display: none;
+    }
+    .carousel-item.active {
+        display: flex;
+    }
+</style>
+    
+</head>
+<body>
+    <!--navgation bar begins here-->
+    <nav class="fixed w-full z-10">
+      <div class="w-full flex h-20 bg-slate-100 rounded-md justify-between items-center "> 
+         <!-- logo-->
+        <a href="#">
+        <div>
+            <img class="h-20"
+             src="your_logo-removebg-preview.png">
+        </div>
+        </a>
+
+        <!-- home,contact-->
+        <ul class="md:flex mr-3 gap-3 items-center hidden " > 
+           <li>
+                <a class='group transition-all duration-300 ease-in-out' href="https://www.apnacollege.in/path-player?courseid=alpha-plus&unit=653fa64b318d6f5d010b431aUnit"> 
+                <div class="bg-left-bottom bg-gradient-to-l from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_3px] transition-all duration-500 ease-out">Home</div>
+                </a>
+            </li>
+           <li>
+                <a class='group transition-all duration-300 ease-in-out' href='#'> 
+                <div class="bg-left-bottom bg-gradient-to-l from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_3px] transition-all duration-500 ease-out">About</div>
+                </a>
+           </li>
+           <li>
+                <a class='group transition-all duration-300 ease-in-out' href='#'> 
+                <div class="bg-left-bottom bg-gradient-to-l from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_3px] transition-all duration-500 ease-out">Services</div>
+                </a>
+           </li>
+           <li>
+                <a class='group transition-all duration-300 ease-in-out' href='#'> 
+                <div class="bg-left-bottom bg-gradient-to-l from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_3px] transition-all duration-500 ease-out">Contact</div>
+                </a>
+           </li>
+           <li class="hover:bg-slate-300 hover:rounded-md">
+                <a href="tel:8143714450">
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" title="refs"/>
+                    </svg>
+                    <span class="ml-2">8143714450</span>
+                </div>
+                </a>
+            </li>
+
+            <li class="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-indigo-600 text-indigo-600 text-white">
+                <a href="#_" >
+                    <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-indigo-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+                    <span class="relative text-indigo-600 transition duration-300 group-hover:text-white ease">Login/Signup</span>
+                    </a>
+            </li>
+        </ul>    
+         <!--navigation toggle-->
+     <div class="md:hidden justify-center ">
+        <a class="text-4xl " href="#">
+             &#8801
+        </a>       
+    </div>    
+    </div>
+    </nav>
+    
+    
+    
+    
+                                    <!--Hero Section-->
+<div title="herosection">
+    <div id="carouselExampleCaptions" class="relative" data-te-carousel-init data-te-ride="carousel">
+        <!-- Carousel indicators -->
+        <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0" data-te-carousel-indicators>
+            <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="0" data-te-carousel-active aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="2" aria-label="Slide 4"></button>
+        </div>
+    
+        <!-- Carousel items -->
+        <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+            <!-- First item -->
+            <div class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-active data-te-carousel-item style="backface-visibility: hidden">
+                <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg" class="block w-full" alt="...">
+                <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                    <h5 class="text-xl">First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <!-- Second item -->
+            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-item style="backface-visibility: hidden">
+                <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg" class="block w-full" alt="...">
+                <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                    <h5 class="text-xl">Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <!-- Third item -->
+            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-item style="backface-visibility: hidden">
+                <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg" class="block w-full" alt="...">
+                <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                    <h5 class="text-xl">Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+            <!-- Fourth item-->
+            <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-item style="backface-visibility: hidden">
+                <img src="x1 copy.jpg" class="block w-full" alt="...">
+                <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                    <h5 class="text-xl">Fourth slide label</h5>
+                    <p>Some representative placeholder content for the fourth slide.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Carousel controls - prev item -->
+        <button class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none" type="button" data-te-target="#carouselExampleCaptions" data-te-slide="prev">
+            <span class="inline-block h-8 w-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </span>
+            <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+        </button>
+        <!-- Carousel controls - next item -->
+        <button class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none" type="button" data-te-target="#carouselExampleCaptions" data-te-slide="next">
+            <span class="inline-block h-8 w-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </span>
+            <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+        </button>
+    
+    </div>
+    
+
+<!-- JavaScript code -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const carouselItems = document.querySelectorAll('[data-te-carousel-item]');
+        const indicators = document.querySelectorAll('[data-te-slide-to]');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            carouselItems.forEach((item, i) => {
+                if (i === index) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+            indicators.forEach((indicator, i) => {
+                indicator.setAttribute('aria-current', i === index ? 'true' : 'false');
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            showSlide(currentIndex);
+        }
+
+        function goToNextSlide() {
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            showSlide(currentIndex);
+        }
+
+        function goToPrevSlide() {
+            currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+            showSlide(currentIndex);
+        }
+
+        function startCarousel() {
+            setInterval(goToNextSlide, 5000); // Change slide every 3 seconds (3000 milliseconds)
+        }
+
+        // Show the initial slide
+        showSlide(currentIndex);
+
+        // Start automatic sliding
+        startCarousel();
+
+        // Add event listeners for control buttons
+        document.querySelector('[data-te-slide="prev"]').addEventListener('click', goToPrevSlide);
+        document.querySelector('[data-te-slide="next"]').addEventListener('click', goToNextSlide);
+
+        // Add event listeners for indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                goToSlide(index);
+            });
+        });
+    });
+</script>
+</div>
+
+                        <!--CHOOSE FROM FLEET-->
+    <div>
+        <div class="flex justify-center p-6" >
+            <h2 class="md:text-3xl text-xl font-serif font-bold text-center">CHOOSE FROM OUR FLEET</h2>
+        </div>
+        <!--cards-->
+        <div class="flex flex-wrap justify-center p-5 gap-4">
+
+            <!--card 1-->
+            <div class="flex flex-col border-black border-2 rounded-lg">
+                <div class="p-5">
+                    <h2 class="font-bold ">Cars</h2>
+                    <p>For upto 7 seats</p>
+                </div>
+                <div class="flex md:flex-row p-1">
+                    <div class="h-auto">
+                        <img class="h-36 w-36" src="https://ik.imagekit.io/ypkplhfs8r/bus%20square_57rUpaOdm?updatedAt=1706637016267" alt="">
+                    </div>
+                <!--beside image matter-->
+                  <div>
+                    <div class="p-3">
+                        <p class="font-bold">Outstation Rates</p>
+                        <p>Starts at Rs 13/Km</p>
+                    </div>
+                    <div class="p-3">
+                        <p class="font-bold">Local Packages</p>
+                        <p>4 hr 40 km : 1500/Km</p>
+                    </div>
+                  </div>
+                <!--beside image matter ends here-->
+                </div>
+                <div class="flex justify-center">
+                    <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-xl shadow-md group w-[95%] my-2">
+                        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </span>
+                        <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease font-bold">CHOOSE &gt;&gt;</span>
+                        <span class="relative invisible">Button Text</span>
+                        </a>
+                    </div>
+            </div>
+
+            <!--card 2-->
+            <div class="flex flex-col border-black border-2 rounded-lg ">
+                <div class="p-5">
+                    <h2 class="font-bold ">Cars</h2>
+                    <p>For upto 7 seats</p>
+                </div>
+                <div class="flex md:flex-row p-1">
+                    <div class="h-auto">
+                        <img class="h-36 w-36" src="https://ik.imagekit.io/ypkplhfs8r/mini%20bus_QowSdPqaw?updatedAt=1706639819843" alt="">
+                    </div>
+                <!--beside image matter-->
+                  <div>
+                    <div class="p-3">
+                        <p class="font-bold">Outstation Rates</p>
+                        <p>Starts at Rs 13/Km</p>
+                    </div>
+                    <div class="p-3">
+                        <p class="font-bold">Local Packages</p>
+                        <p>4 hr 40 km : 1500/Km</p>
+                    </div>
+                  </div>
+                <!--beside image matter ends here-->
+                </div>
+                <div class="flex justify-center">
+                    <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-xl shadow-md group w-[95%] my-2">
+                        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </span>
+                        <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease font-bold">CHOOSE &gt;&gt;</span>
+                        <span class="relative invisible">Button Text</span>
+                        </a>
+                    </div>
+            </div>
+
+
+            <!--card 3-->
+            <div class="flex flex-col border-black border-2 rounded-lg">
+                <div class="p-5">
+                    <h2 class="font-bold ">Cars</h2>
+                    <p>For upto 7 seats</p>
+                </div>
+                <div class="flex md:flex-row p-1">
+                    <div class="h-auto">
+                        <img class="h-36 w-36" src="https://ik.imagekit.io/ypkplhfs8r/bus%20square_57rUpaOdm?updatedAt=1706637016267" alt="">
+                    </div>
+                <!--beside image matter-->
+                  <div>
+                    <div class="p-3">
+                        <p class="font-bold">Outstation Rates</p>
+                        <p>Starts at Rs 13/Km</p>
+                    </div>
+                    <div class="p-3">
+                        <p class="font-bold">Local Packages</p>
+                        <p>4 hr 40 km : 1500/Km</p>
+                    </div>
+                  </div>
+                <!--beside image matter ends here-->
+                </div>
+                <div class="flex justify-center">
+                    <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-xl shadow-md group w-[95%] my-2">
+                        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </span>
+                        <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease font-bold">CHOOSE &gt;&gt;</span>
+                        <span class="relative invisible">Button Text</span>
+                        </a>
+                    </div>
+            </div>
+
+
+            <!--card 4-->
+            <div class="flex flex-col border-black border-2 rounded-lg">
+                <div class="p-5">
+                    <h2 class="font-bold ">Cars</h2>
+                    <p>For upto 7 seats</p>
+                </div>
+                <div class="flex md:flex-row p-1">
+                    <div class="h-auto">
+                        <img class="h-36 w-36" src="https://ik.imagekit.io/ypkplhfs8r/bus%20square_57rUpaOdm?updatedAt=1706637016267" alt="">
+                    </div>
+                <!--beside image matter-->
+                  <div>
+                    <div class="p-3">
+                        <p class="font-bold">Outstation Rates</p>
+                        <p>Starts at Rs 13/Km</p>
+                    </div>
+                    <div class="p-3">
+                        <p class="font-bold">Local Packages</p>
+                        <p>4 hr 40 km : 1500/Km</p>
+                    </div>
+                  </div>
+                <!--beside image matter ends here-->
+                </div>
+                <div class="flex justify-center">
+                    <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-xl shadow-md group w-[95%] my-2">
+                        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </span>
+                        <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease font-bold">CHOOSE &gt;&gt;</span>
+                        <span class="relative invisible">Button Text</span>
+                        </a>
+                    </div>
+            </div>
+
+            <!--card 5-->
+            <div class="flex flex-col border-black border-2 rounded-lg">
+                <div class="p-5">
+                    <h2 class="font-bold ">Cars</h2>
+                    <p>For upto 7 seats</p>
+                </div>
+                <div class="flex md:flex-row p-1">
+                    <div class="h-auto">
+                        <img class="h-36 w-36" src="https://ik.imagekit.io/ypkplhfs8r/bus%20square_57rUpaOdm?updatedAt=1706637016267" alt="">
+                    </div>
+                <!--beside image matter-->
+                  <div>
+                    <div class="p-3">
+                        <p class="font-bold">Outstation Rates</p>
+                        <p>Starts at Rs 13/Km</p>
+                    </div>
+                    <div class="p-3">
+                        <p class="font-bold">Local Packages</p>
+                        <p>4 hr 40 km : 1500/Km</p>
+                    </div>
+                  </div>
+                <!--beside image matter ends here-->
+                </div>
+                <div class="flex justify-center">
+                    <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-xl shadow-md group w-[95%] my-2">
+                        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </span>
+                        <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease font-bold">CHOOSE &gt;&gt;</span>
+                        <span class="relative invisible">Button Text</span>
+                        </a>
+                    </div>
+            </div>
+
+            <!--card 6-->
+            <div class="flex flex-col border-black border-2 rounded-lg">
+                <div class="p-5">
+                    <h2 class="font-bold ">Cars</h2>
+                    <p>For upto 7 seats</p>
+                </div>
+                <div class="flex md:flex-row p-1">
+                    <div class="h-auto">
+                        <img class="h-36 w-36" src="https://ik.imagekit.io/ypkplhfs8r/bus%20square_57rUpaOdm?updatedAt=1706637016267" alt="">
+                    </div>
+                <!--beside image matter-->
+                  <div>
+                    <div class="p-3">
+                        <p class="font-bold">Outstation Rates</p>
+                        <p>Starts at Rs 13/Km</p>
+                    </div>
+                    <div class="p-3">
+                        <p class="font-bold">Local Packages</p>
+                        <p>4 hr 40 km : 1500/Km</p>
+                    </div>
+                  </div>
+                <!--beside image matter ends here-->
+                </div>
+                <div class="flex justify-center">
+                    <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-xl shadow-md group w-[95%] my-2">
+                        <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </span>
+                        <span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease  font-bold">CHOOSE &gt;&gt;</span>
+                        <span class="relative invisible">Button Text</span>
+                        </a>
+                    </div>
+            </div>
+
+ 
+        </div>
+
+    </div>
+
+                        <!--Vehicle Services-->
+<div>
+    <section class="md:mt-24 mt-12 container">
+    <h2 class="md:text-4xl text-xl text-center font-bold uppercase">Vehicle Services</h2>
+<!-- vehicle services images and matter-->
+    <div class="md:mt-12 mt-6 grid md:grid-cols-4 grid-cols-2 gap-6 pl-4 pr-4">
+    <!--img 1-->
+    <div class="border-gray-200 shadow-sm ">
+            <a href="#" class="flex flex-col h-[90%] gap-0">
+                <img src="https://ik.imagekit.io/ypkplhfs8r/airport%20tranfers_cxVacT7IS?updatedAt=1706722851689" width="500" alt="Airport Transfers" class="w-full h-44 lg:h-auto object-cover rounded-t-xl">
+                <div class="p-4 flex flex-col border border-gray-200 shadow-sm rounded-b-lg h-full">
+                    <h3 class="text-primary md:text-2xl text-base font-bold">Airport Transfers</h3>
+                    <p class="text-sm mt-4">Renting airport bookings with us provides an extremely convenient and reliable,
+                    form of transportation. It ensures a comfortable journey with no stress,,
+                    allowing you to save both time and effort.</p>
+                </div>
+            </a>
+    </div>
+    <!--img 2-->
+    <div class="border-gray-200 shadow-sm">
+    <a href="#" class="flex flex-col h-[90%] gap-0">
+        <img src="https://ik.imagekit.io/ypkplhfs8r/airport%20tranfers_cxVacT7IS?updatedAt=1706722851689" width="500" alt="Airport Transfers" class="w-full h-44 lg:h-auto object-cover rounded-t-xl">
+        <div class="p-4 flex flex-col border border-gray-200 shadow-sm rounded-b-lg h-full">
+            <h3 class="text-primary md:text-2xl text-base font-bold">Airport Transfers</h3>
+            <p class="text-sm mt-4">Renting airport bookings with us provides an extremely convenient and reliable,
+            form of transportation. It ensures a comfortable journey with no stress,,
+            allowing you to save both time and effort.</p>
+        </div>
+    </a>
+    </div>
+    <!--img 3-->
+    <div class="border-gray-200 shadow-sm">
+        <a href="#" class="flex flex-col h-[90%] gap-0">
+            <img src="https://ik.imagekit.io/ypkplhfs8r/airport%20tranfers_cxVacT7IS?updatedAt=1706722851689" width="500" alt="Airport Transfers" class="w-full h-44 lg:h-auto object-cover rounded-t-xl">
+            <div class="p-4 flex flex-col border border-gray-200 shadow-sm rounded-b-lg h-full">
+                <h3 class="text-primary md:text-2xl text-base font-bold">Airport Transfers</h3>
+                <p class="text-sm mt-4">Renting airport bookings with us provides an extremely convenient and reliable,
+                form of transportation. It ensures a comfortable journey with no stress,,
+                allowing you to save both time and effort.</p>
+            </div>
+        </a>
+    </div>
+    <!--img 4-->
+    <div class="border-gray-200 shadow-sm ">
+        <a href="#" class="flex flex-col h-[90%] gap-0">
+            <img src="https://ik.imagekit.io/ypkplhfs8r/airport%20tranfers_cxVacT7IS?updatedAt=1706722851689" width="500" alt="Airport Transfers" class="w-full h-44 lg:h-auto object-cover rounded-t-xl">
+            <div class="p-4 flex flex-col border border-gray-200 shadow-sm rounded-b-lg h-full">
+                <h3 class="text-primary md:text-2xl text-base font-bold">Airport Transfers</h3>
+                <p class="text-sm mt-4">Renting airport bookings with us provides an extremely convenient and reliable,
+                form of transportation. It ensures a comfortable journey with no stress,,
+                allowing you to save both time and effort.</p>
+            </div>
+        </a>
+    </div>
+    
+</div>
+</div>
+
+                        <!--our clients-->
+
+<div>
+    <div class="flex items-center justify-center w-full h-full py-24 sm:py-8 px-4">
+        <div class="w-full relative flex items-center justify-center">
+            <button aria-label="slide backward" class="absolute z-30 left-0 ml-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer" id="prev">
+                <svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
+                <div id="slider" class="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
+                    <!-- Your carousel content goes here -->
+                </div>
+            </div>
+            <button aria-label="slide forward" class="absolute z-30 right-0 mr-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" id="next">
+                <svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        let defaultTransform = 0;
+    
+        function goNext() {
+            defaultTransform = defaultTransform - 398;
+            var slider = document.getElementById("slider");
+            if (Math.abs(defaultTransform) >= slider.scrollWidth / 1.7) defaultTransform = 0;
+            slider.style.transform = "translateX(" + defaultTransform + "px)";
+        }
+    
+        function goPrev() {
+            var slider = document.getElementById("slider");
+            if (Math.abs(defaultTransform) === 0) defaultTransform = 0;
+            else defaultTransform = defaultTransform + 398;
+            slider.style.transform = "translateX(" + defaultTransform + "px)";
+        }
+    
+        document.getElementById("next").addEventListener("click", goNext);
+        document.getElementById("prev").addEventListener("click", goPrev);
+    </script>
+    
+</div>
+                    
+</body>
+</html>

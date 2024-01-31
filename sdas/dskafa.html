@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transport Service</title>
+  <style>
+    /* CSS Styles */
+    .cabs-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 1200px;
+      padding: 2rem 0;
+    }
+
+    .cab-card {
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex-basis: calc(33.33% - 20px);
+      margin: 10px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .cab-card h2 {
+      color: #4CAF50;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cab-card p {
+      color: #333;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .choose-btn {
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .choose-btn:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HTML Structure -->
+  <div class="cabs-container">
+    <div class="cab-card">
+      <h2>Cabs</h2>
+      <p>For Upto 7 seats</p>
+      <p>To</p>
+      <p>Outstation Rates</p>
+      <p>Starts at Rs 13/Km</p>
+      <p>Local Packages</p>
+      <p>4 hr 40 km: 1500/Km</p>
+      <button class="choose-btn">CHOOSE</button>
+    </div>
+    <div class="cab-card">
+      <h2>Tempo Traveller</h2>
+      <p>For 8-18 seats</p>
+      <p>Outstation Rates</p>
+      <p>Starts at Rs 30/Km</p>
+      <p>Local Packages</p>
+      <p>4 hr 40 km: 3500/Km</p>
+      <button class="choose-btn">CHOOSE</button>
+    </div>
+    <div class="cab-card">
+      <h2>Mini Bus</h2>
+      <p>From 14-25 seats</p>
+      <p>Outstation Rates</p>
+      <p>Starts at Rs 34/Km</p>
+      <p>Local Packages</p>
+      <p>4 hr 40 km : 4500 / Km</p>
+      <button class="choose-btn">CHOOSE</button>
+    </div>
+    <div class="cab-card">
+      <h2>Bus</h2>
+      <p>From 27-50 seats</p>
+      <p>Outstation Rates</p>
+      <p>Starts at Rs 45/Km</p>
+      <p>Local Packages</p>
+      <p>4 hr 40 km : 9000 / Km</p>
+      <button class="choose-btn">CHOOSE</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const chooseBtns = document.querySelectorAll('.choose-btn');
+
+    chooseBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert('You have chosen a ' + btn.closest('.cab-card').querySelector('h2').textContent);
+      });
+    });
+  </script>
+</body>
+
+</html>

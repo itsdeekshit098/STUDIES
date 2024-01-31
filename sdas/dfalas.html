@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Service</title>
+    <style>
+        /* CSS Styles */
+        .md\:mt-12 {
+            margin-top: 3rem; /* Update the value as needed */
+        }
+
+        /* Add other tailwindcss classes as needed */
+
+        .button {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #007bff;
+        }
+
+        .button:disabled {
+            background-color: #c0c0c0;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HTML Structure -->
+    <div class="md:mt-12 mt-6 grid lg:grid-cols-4 grid-cols-2 md:gap-6 gap-2">
+        <a href="/cab-rent-bangalore" class="border border-gray-500 bg-white rounded-lg flex flex-col relative">
+            <h3 class="font-bold md:text-xl text-base pl-4 pt-4">Cabs</h3>
+            <p class="text-sm pl-4 mt-1 hidden md:block">For Upto 7 seats</p>
+            <div class="grid md:grid-cols-2 grid-cols-1 md:mt-4 mt-2 mb-4 md:mb-0"></div>
+            <div class="p-4 hidden md:block mt-auto">
+                <button class="px-6 py-2 bg-blue-500 text-white rounded-lg button" data-v-cdbd08bf>
+                    <p class="font-bold uppercase">Choose</p>
+                </button>
+            </div>
+        </a>
+        <!-- Repeat the above <a> element for other transportation options -->
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const buttons = document.querySelectorAll('.button');
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+                // Add your code here to handle the button click event
+            });
+        });
+    </script>
+</body>
+
+</html>
